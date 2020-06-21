@@ -11,6 +11,8 @@ COPY app app/
 
 RUN python app/server.py
 
+RUN pip install gunicorn
+
 EXPOSE 5000
 
 CMD ["python", "app/server.py", "serve"]
